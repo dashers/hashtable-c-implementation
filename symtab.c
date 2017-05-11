@@ -185,8 +185,9 @@ int symtabInstall(void *symtabHandle, const char *symbol, void *data)
 		}
 
 		newpair->next = NULL;
-		newpair->key = symbol;
 		newpair->value = data;
+		newpair->key = malloc(strlen(symbol) + 1);
+        	strcpy(newpair->key, symbol);
 
 		if( next == hashtable->table[ bin ] ) {
 			newpair->next = next;
