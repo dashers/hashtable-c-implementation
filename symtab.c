@@ -1,6 +1,8 @@
 //
 // This is the implementation of a generic symbol table. A table stores
 // (symbol, data) pairs.
+//
+// Debajyoti Dash
 
 
 #include <stdlib.h>
